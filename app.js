@@ -1,4 +1,6 @@
-let innerWidth = window.innerWidth
+// let innerWidth = window.innerWidth
+let innerHeight = window.innerHeight
+let innerWidth =  document.documentElement.clientWidth
 const headerDT = document.querySelector('.headerDT')
 const headerMobil = document.querySelector('.headerMobil')
 const mobilMenu = document.querySelector('.mobil-menu')
@@ -7,24 +9,30 @@ const hrefMobil = document.querySelectorAll('.href')
 
 let cardsCount 
 
+
+console.log('innerWidth', innerWidth);
+console.log('innerHeight', innerHeight);
+
 const  countCards = function(){
     console.log('cardsCount', cardsCount);
     if( innerWidth < 576  ){
         return  cardsCount = 1.2
     }
-    if( innerWidth < 768 &&  innerWidth < 576    ){
+    // if( innerWidth < 768 &&  innerWidth < 576    ){
+    if( innerWidth < 768   ){
         return  cardsCount = 1.5
     }
     if( innerWidth < 992  ){
         return  cardsCount = 2.2
     }
-
-    if( innerWidth > 1340  ){
-        return  cardsCount = 3.7
-    }
     if( innerWidth < 1340 && innerWidth> 992 ){
         return cardsCount = 3
     }
+    if( innerWidth > 1340  ){
+        
+        return  cardsCount = 3.7
+    }
+
   
  
 
