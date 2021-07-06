@@ -548,7 +548,8 @@ header {
       border-radius: 10.4px;
       z-index: -1;
       background: linear-gradient(255deg, #feda7a, #f72f2f, #7166cf);
-      background-size: 130% 110%; }
+      background-size: 130% 110%;
+      transition: 1s ease !important; }
       .container .infom__block .inform__block-right .butto__wrap button {
         margin-right: -0.5px;
         display: flex;
@@ -1029,6 +1030,8 @@ header {
 @media (max-width: 500px) {
   .h2 {
     margin-bottom: 10px !important; }
+  .p {
+    padding-left: 10px !important; }
   .program__item-p {
     font-size: 13px !important; }
   .speaker__info img {

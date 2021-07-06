@@ -6,34 +6,39 @@ const headerMobil = document.querySelector('.headerMobil')
 const mobilMenu = document.querySelector('.mobil-menu')
 const burger_modal = document.querySelector('.burger_modal')
 const burger = document.querySelector('.burger')
+const favoritesAdd = document.querySelector('.favoritesAdd')
 const sponsorsButton = document.querySelector('.sponsorsButton')
 const modal_wrap = document.querySelector('.modal_wrap')
+const butto__wrap = document.querySelector('.butto__wrap')
 const hrefMobil = document.querySelectorAll('.href')
 const arrowTooltip = document.querySelectorAll('.lkArrowSvg')
 const tooltip = document.querySelectorAll('.lkToolptip')
 
 
-// let modalWindow
 
+// MODAL
 sponsorsButton.addEventListener('click', ()=>{
-
     modal_wrap.classList.add('modal_wrap-active')
-    console.log('HUY');
-    
 })
 
 burger_modal.addEventListener('click', ()=>{
-
-    modal_wrap.classList.remove('modal_wrap-active')
-    console.log('HUYYY');
-    
+    modal_wrap.classList.remove('modal_wrap-active')    
 })
 
 
 
 
 
-
+favoritesAdd.addEventListener('mouseover', ()=>{
+    console.log('enter');
+    butto__wrap.style.background= 'linear-gradient(125deg, #feda7a, #f72f2f, #7166cf)';
+    butto__wrap.style.backgroundSize =" 300% 220%"
+})
+favoritesAdd.addEventListener('mouseout', ()=>{
+    console.log('enter2');
+    butto__wrap.style.background= 'linear-gradient(255deg, #feda7a, #f72f2f, #7166cf)';
+    butto__wrap.style.backgroundSize =" 220% 110%"
+})
 
 
 

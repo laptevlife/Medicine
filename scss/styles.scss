@@ -970,6 +970,7 @@ header {
                 z-index: -1;
                 background: linear-gradient(255deg, #feda7a, #f72f2f, #7166cf);
                 background-size: 130% 110%;
+                transition:  1s ease !important;
 
                 button {
                     // width: 300px;
@@ -2120,6 +2121,15 @@ header {
     .h2{
         margin-bottom: 10px !important;
     }
+    .p{
+        padding-left: 10px !important;
+    }
+    // .p__ml{
+    //     margin-left: -20px !important;
+    // }
+    // .inform__block-left {
+    //     // padding-left: 10px !important;
+    // }
     .program__item-p {
         // color: blue !important;
         font-size: 13px !important;
