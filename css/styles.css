@@ -1245,7 +1245,10 @@ header {
           padding: 30px;
           max-width: 200px;
           max-height: 200px;
-          position: relative; }
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
           .modal_wrap .modal_window .modal_content .modal__scroll__content .modal__content-item img, .modal_wrap .modal_window .modal_content .modal__scroll__content .modal__content-item svg {
             width: 100%; }
     .modal_wrap .modal_window .modal_content::-webkit-scrollbar {

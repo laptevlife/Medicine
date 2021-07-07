@@ -2350,6 +2350,9 @@ header {
                     max-width: 200px;
                     max-height: 200px;
                     position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
 
                     img, svg {
                         width: 100%;
