@@ -17,29 +17,29 @@ const tooltip = document.querySelectorAll('.lkToolptip')
 
 
 // MODAL
-sponsorsButton.addEventListener('click', ()=>{
+sponsorsButton.addEventListener('click', () => {
     modal_wrap.classList.add('modal_wrap-active')
 })
 
-burger_modal.addEventListener('click', ()=>{
-    modal_wrap.classList.remove('modal_wrap-active')    
+burger_modal.addEventListener('click', () => {
+    modal_wrap.classList.remove('modal_wrap-active')
 })
 
 
 
 
 
-favoritesAdd.addEventListener('mouseover', ()=>{
-    console.log('enter');
-    butto__wrap.style.background= 'linear-gradient(125deg, #feda7a, #f72f2f, #7166cf)';
-    butto__wrap.style.backgroundSize =" 300% 220%"
-    butto__wrap.style.transition =" all 1s ease"
+favoritesAdd.addEventListener('mouseover', () => {
+    // console.log('enter');
+    butto__wrap.style.background = 'linear-gradient(125deg, #feda7a, #f72f2f, #7166cf)';
+    butto__wrap.style.backgroundSize = " 300% 220%"
+    butto__wrap.style.transition = " all 1s ease"
 })
-favoritesAdd.addEventListener('mouseout', ()=>{
-    console.log('enter2');
-    butto__wrap.style.background= 'linear-gradient(255deg, #feda7a, #f72f2f, #7166cf)';
-    butto__wrap.style.backgroundSize =" 220% 110%"
-    butto__wrap.style.transition =" all 1s ease"
+favoritesAdd.addEventListener('mouseout', () => {
+    // console.log('enter2');
+    butto__wrap.style.background = 'linear-gradient(255deg, #feda7a, #f72f2f, #7166cf)';
+    butto__wrap.style.backgroundSize = " 220% 110%"
+    butto__wrap.style.transition = " all 1s ease"
 })
 
 
@@ -48,7 +48,7 @@ let tooltipVisability = false;
 
 const tooltipController = () => {
     document.body.addEventListener('click', (e) => {
-        
+
         if (e.target.classList.contains('user')) {
             tooltipVisability = !tooltipVisability
             if (tooltipVisability) {
@@ -61,14 +61,14 @@ const tooltipController = () => {
             }
             // return tooltipVisability = !tooltipVisability
         }
-        if(!e.target.classList.contains('user') && 
-        !e.target.classList.contains('lkToolptip')&&
-        !e.target.classList.contains('personal-info')&&
-        !e.target.classList.contains('name')&&
-        !e.target.classList.contains('mail')&&
-        !e.target.classList.contains('tooltip-menu')&&
-        // !e.target.classList.contains('tooltip-menu')&&
-         tooltipVisability ){
+        if (!e.target.classList.contains('user') &&
+            !e.target.classList.contains('lkToolptip') &&
+            !e.target.classList.contains('personal-info') &&
+            !e.target.classList.contains('name') &&
+            !e.target.classList.contains('mail') &&
+            !e.target.classList.contains('tooltip-menu') &&
+            // !e.target.classList.contains('tooltip-menu')&&
+            tooltipVisability) {
             tooltipVisability = !tooltipVisability
             tooltip.forEach(i => i.classList.remove('tolltip_visible'))
             arrowTooltip.forEach(i => i.classList.remove('tolltip_visible'))
@@ -82,89 +82,64 @@ const tooltipController = () => {
 tooltipController()
 
 
-const leftArrow = document.querySelector('.arrowLeft') 
-const rightArrow = document.querySelector('.arrowRight') 
-const scrollContainer = document.querySelector('.scrollContainer') 
+const leftArrow = document.querySelector('.arrowLeft')
+const rightArrow = document.querySelector('.arrowRight')
+const scrollContainer = document.querySelector('.scrollContainer')
 var sectionIndex = 0;
 let specialtyItems = document.querySelectorAll('div[data-specialty]')//data-specialty
 
 //  let specialtyItems = document.querySelectorAll('.specialtyItem')
 
-const hideArrow = ()=>{
-    console.log('sectionIndex', sectionIndex);
-    
-    if(  sectionIndex ===0   ) {
+const hideArrow = () => {
+    // console.log('sectionIndex', sectionIndex);
+
+    if (sectionIndex === 0) {
         leftArrow.style.opacity = 0
-    }else{
-        leftArrow.style.opacity = 1  
+    } else {
+        leftArrow.style.opacity = 1
     }
-    if(  sectionIndex > specialtyItems.length-1   ) {
+    if (sectionIndex > specialtyItems.length - 1) {
         rightArrow.style.opacity = 0
-    }else{
-        rightArrow.style.opacity = 1  
+    } else {
+        rightArrow.style.opacity = 1
     }
 }
 
 
 hideArrow()
 
-leftArrow.addEventListener('click',function(){
-     sectionIndex <= 0 ? sectionIndex = 1 : null
-    scrollContainer.style.transform = 'translate(' + (sectionIndex -1) * -200 + 'px)';
-     sectionIndex = sectionIndex  - 1
-     hideArrow()
-    
+leftArrow.addEventListener('click', function () {
+    sectionIndex <= 0 ? sectionIndex = 1 : null
+    scrollContainer.style.transform = 'translate(' + (sectionIndex - 1) * -200 + 'px)';
+    sectionIndex = sectionIndex - 1
+    hideArrow()
+
 });
 
 
-rightArrow.addEventListener('click',function(){
+rightArrow.addEventListener('click', function () {
     // sectionIndex = (sectionIndex < 3) ? sectionIndex + 1:0;
 
     // let specialtyItems = document.querySelectorAll('.specialtyItem')//data-specialty
 
-    if (sectionIndex === specialtyItems.length ) return
-    scrollContainer.style.transform = 'translate(' + (sectionIndex +1) * -200 + 'px)';
-     sectionIndex = sectionIndex +1
-     hideArrow()
+    if (sectionIndex === specialtyItems.length) return
+    scrollContainer.style.transform = 'translate(' + (sectionIndex + 1) * -200 + 'px)';
+    sectionIndex = sectionIndex + 1
+    hideArrow()
 
-    
+
 });
 
-
-let cardsCount
-
-const countCards = function () {
-
-    if (innerWidth < 576) {
-        return cardsCount = 1.12
-    }
-    // if( innerWidth < 768 &&  innerWidth < 576    ){
-    if (innerWidth < 768) {
-        return cardsCount = 1.5
-    }
-    if (innerWidth < 992) {
-        return cardsCount = 2.2
-    }
-    if (innerWidth < 1340 && innerWidth > 992) {
-        return cardsCount = 3.1
-    }
-    if (innerWidth > 1340) {
-
-        return cardsCount = 4.1
-    }
-
-
-
+const linkToCardInfo = (id) => {
+    window.location = `https://nmox.ru/event/${id}`
 
 }
-
-countCards()
 
 window.addEventListener('resize', () => {
     innerWidth = window.innerWidth
     widthController()
-    countCards()
-    
+    // countCards()
+
 
 })
 
@@ -237,10 +212,22 @@ var swiper2 = new Swiper(".banerSwiper", {
 
 
 });
+
+const resizeForCARDSKA = () => {
+    window.addEventListener('resize', () => {
+        innerWidth = window.innerWidth
+
+        countCards()
+
+
+    })
+
+}
+
 var swiper3 = new Swiper(".cardsSwiper", {
 
 
-    slidesPerView: cardsCount,
+    slidesPerView: 'auto',
     spaceBetween: 30,
     slidesPerGroup: 1,
 
