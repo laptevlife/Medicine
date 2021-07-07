@@ -207,7 +207,7 @@ var swiper = new Swiper(".mySwiper", {
 
 var swiper = new Swiper(".specialtySwiper", {
     // spaceBetween: 30,
-
+    freeMode: true,
     autoplay: {
         delay: 5000,
         disableOnInteraction: false,

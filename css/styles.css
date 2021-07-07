@@ -1008,7 +1008,8 @@ header {
     bottom: 66px; }
 
 .swiper-slide {
-  width: 340px; }
+  width: auto;
+  min-width: 200px; }
 
 .cards__slider {
   width: 100%; }
