@@ -73,10 +73,6 @@ const tooltipController = () => {
             tooltip.forEach(i => i.classList.remove('tolltip_visible'))
             arrowTooltip.forEach(i => i.classList.remove('tolltip_visible'))
         }
-
-
-
-
     })
 }
 tooltipController()
@@ -89,46 +85,59 @@ var sectionIndex = 0;
 let specialtyItems = document.querySelectorAll('div[data-specialty]')//data-specialty
 
 //  let specialtyItems = document.querySelectorAll('.specialtyItem')
+const scrollWrap = document.querySelector('.scrollWrap')
+
 
 const hideArrow = () => {
     // console.log('sectionIndex', sectionIndex);
 
+
+    // console.log( scrollWrap.offsetWidth, x);
+    
     if (sectionIndex === 0) {
         leftArrow.style.opacity = 0
     } else {
         leftArrow.style.opacity = 1
     }
-    if (sectionIndex > specialtyItems.length - 1) {
+    if ( sectionIndex > specialtyItems.length - 1 || scrollWrap.offsetWidth <  (sectionIndex+2) * 200 ) {
         rightArrow.style.opacity = 0
     } else {
         rightArrow.style.opacity = 1
     }
+ 
 }
 
 
-hideArrow()
 
-leftArrow.addEventListener('click', function () {
-    sectionIndex <= 0 ? sectionIndex = 1 : null
-    scrollContainer.style.transform = 'translate(' + (sectionIndex - 1) * -200 + 'px)';
-    sectionIndex = sectionIndex - 1
-    hideArrow()
-
-});
+// hideArrow()
 
 
-rightArrow.addEventListener('click', function () {
-    // sectionIndex = (sectionIndex < 3) ? sectionIndex + 1:0;
-
-    // let specialtyItems = document.querySelectorAll('.specialtyItem')//data-specialty
-
-    if (sectionIndex === specialtyItems.length) return
-    scrollContainer.style.transform = 'translate(' + (sectionIndex + 1) * -200 + 'px)';
-    sectionIndex = sectionIndex + 1
-    hideArrow()
 
 
-});
+
+// leftArrow.addEventListener('click', function () {
+//     sectionIndex <= 0 ? sectionIndex = 1 : null
+//     scrollContainer.style.transform = 'translate(' + (sectionIndex - 1) * -200 + 'px)';
+//     sectionIndex = sectionIndex - 1
+//     hideArrow()
+
+// });
+
+
+// rightArrow.addEventListener('click', function () {
+//     // sectionIndex = (sectionIndex < 3) ? sectionIndex + 1:0;
+//     // console.log(scrollContainer.offsetWidth);
+//     console.log( scrollWrap.offsetWidth, (sectionIndex+1) * 200 );
+
+//     // let specialtyItems = document.querySelectorAll('.specialtyItem')//data-specialty
+
+//     if (sectionIndex === specialtyItems.length) return
+//     scrollContainer.style.transform = 'translate(' + (sectionIndex + 1) * -200 + 'px)';
+//     sectionIndex = sectionIndex + 1
+//     hideArrow()
+
+
+// });
 
 const linkToCardInfo = (id) => {
     window.location = `https://nmox.ru/event/${id}`
@@ -196,6 +205,21 @@ var swiper = new Swiper(".mySwiper", {
     },
 });
 
+var swiper = new Swiper(".specialtySwiper", {
+    // spaceBetween: 30,
+
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    slidesPerView: 'auto',
+});
+
 
 
 var swiper2 = new Swiper(".banerSwiper", {
@@ -213,16 +237,6 @@ var swiper2 = new Swiper(".banerSwiper", {
 
 });
 
-const resizeForCARDSKA = () => {
-    window.addEventListener('resize', () => {
-        innerWidth = window.innerWidth
-
-        countCards()
-
-
-    })
-
-}
 
 var swiper3 = new Swiper(".cardsSwiper", {
 
