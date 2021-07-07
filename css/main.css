@@ -33,6 +33,183 @@
   font-weight: 500;
   font-style: normal; }
 
+.body-faq {
+  background-color: #fff !important; }
+
+.h1-top {
+  width: 100%;
+  height: 100px;
+  color: #fff;
+  background-color: #333333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  border-radius: 12.4px;
+  font-size: calc((120vw - 30rem)/(80 - 30) * (1.5 - 1) + 1rem);
+  position: relative;
+  font-family: Gilroy_Semiold; }
+
+.faq__block {
+  position: relative;
+  color: #333333e1;
+  padding-right: 10px;
+  margin-bottom: 35px; }
+
+.h2-faq {
+  position: relative;
+  font-size: 30px;
+  font-weight: 600;
+  font-family: Gilroy_Semiold;
+  margin-bottom: 10px;
+  padding-left: 40px; }
+
+.h3-faq {
+  margin-top: 35px;
+  font-size: 30px;
+  font-weight: 300;
+  font-family: Gilroy_Semiold;
+  font-weight: 800;
+  margin-bottom: 10px;
+  padding-left: 40px; }
+
+.p-faq {
+  font-size: 24px;
+  margin-top: 35px;
+  font-family: Gilroy_Regular;
+  padding-left: 40px;
+  font-weight: 500;
+  color: #333333c7; }
+
+.p-faq-bold {
+  margin-top: 55px;
+  font-size: 24px;
+  font-weight: 300;
+  font-family: Gilroy_Semiold;
+  font-weight: 800;
+  margin-bottom: 10px;
+  padding-left: 40px;
+  line-height: 35px; }
+
+.svg__colored__treangle {
+  position: absolute;
+  top: 10px;
+  left: 0px; }
+
+.faq__content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px; }
+  .faq__content .sidebar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 50px;
+    width: 30%;
+    height: 80vh;
+    background-color: #333333;
+    border-radius: 12.4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .faq__content .sidebar .sidebar_hedline {
+      color: #fff;
+      margin-top: 20px;
+      font-size: 40px;
+      padding-bottom: 10px;
+      font-family: Gilroy_Regular; }
+    .faq__content .sidebar .sidebar_content {
+      width: 100%;
+      margin-top: 15px;
+      font-family: Gilroy_Regular;
+      position: relative; }
+      .faq__content .sidebar .sidebar_content .menu__item-h1 {
+        font-size: 24px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        color: #fff;
+        padding-left: 40px;
+        text-decoration: none; }
+      .faq__content .sidebar .sidebar_content .menu__item-h2 {
+        padding-left: 70px;
+        font-size: 24px;
+        color: #fff;
+        text-decoration: none;
+        display: block; }
+      @media (min-width: 1340px) {
+        .faq__content .sidebar .sidebar_content .colored__treangle {
+          top: 8px; } }
+      @media (max-width: 1340px) and (min-width: 992px) {
+        .faq__content .sidebar .sidebar_content .colored__treangle {
+          top: 3px; }
+        .faq__content .sidebar .sidebar_content .menu__item-h1, .faq__content .sidebar .sidebar_content .menu__item-h2 {
+          font-size: 18px !important;
+          padding-left: 30px; }
+        .faq__content .sidebar .sidebar_content .menu__item-h2 {
+          padding-left: 50px; } }
+  .faq__content .content__block {
+    width: 68%; }
+  @media (max-width: 992px) {
+    .faq__content .sidebar {
+      display: none; }
+    .faq__content .content__block {
+      width: 100%; } }
+  @media (max-width: 768px) {
+    .faq__content .svg__colored__treangle {
+      top: 2px; }
+    .faq__content .h2-faq {
+      font-size: 30px;
+      line-height: 25px; }
+    .faq__content .h3-faq {
+      margin-top: 35px;
+      font-size: 20px;
+      line-height: 25px; }
+    .faq__content .p-faq {
+      font-size: 20px;
+      line-height: 25px; }
+    .faq__content .p-faq-bold {
+      margin-top: 55px;
+      font-size: 20px;
+      line-height: 25px; } }
+
+@media (min-width: 450px) {
+  .h1-top-mobil {
+    display: none !important; } }
+
+@media (max-width: 450px) {
+  .svg__colored {
+    left: -10px !important; }
+  .h1-top-mobil {
+    display: block;
+    width: 100%;
+    height: 100px;
+    color: #fff;
+    background-color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    border-radius: 12.4px;
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+    font-family: Gilroy_Semiold; }
+  .h1-top {
+    display: none !important; }
+  .svg__colored__treangle {
+    top: 2px;
+    left: -13px; }
+  .h2-faq {
+    padding-left: 15px; }
+  .h3-faq {
+    padding-left: 15px;
+    font-size: 25px !important; }
+  .p-faq {
+    padding-left: 15px;
+    font-size: 20px !important; }
+  .p-faq-bold {
+    padding-left: 15px;
+    font-size: 20px; } }
+
 .lkToolptip {
   display: none;
   position: absolute;
@@ -105,7 +282,8 @@ header {
     position: relative; }
     header nav .logo {
       position: relative;
-      height: 90px; }
+      height: 90px;
+      text-decoration: none; }
       header nav .logo svg {
         width: 120px;
         height: 90px; }
@@ -529,9 +707,7 @@ header {
     height: 0; }
 
 .svg__colored__treangle {
-  position: absolute;
-  top: 12px;
-  left: 0px; }
+  position: absolute; }
 
 .container section {
   background-color: pink !important; }
@@ -551,7 +727,6 @@ header {
   .container .infom__block .inform__block-left {
     width: 50%;
     margin-top: 30px;
-    padding-left: 30px;
     position: relative; }
     .container .infom__block .inform__block-left h2 {
       font-size: 30px;
@@ -575,7 +750,8 @@ header {
   .container .infom__block .inform__block-right {
     margin-top: 15px;
     width: 50%;
-    position: relative; }
+    position: relative;
+    text-align: right; }
     .container .infom__block .inform__block-right .butto__wrap {
       margin-top: 25px;
       display: inline-block;
@@ -584,7 +760,7 @@ header {
       z-index: -1;
       background: linear-gradient(255deg, #feda7a, #f72f2f, #7166cf);
       background-size: 130% 110%;
-      transition: 1s ease !important; }
+      transition: all  0.5s ease !important; }
       .container .infom__block .inform__block-right .butto__wrap button {
         margin-right: -0.5px;
         display: flex;
@@ -633,9 +809,8 @@ header {
   position: relative;
   margin-top: 50px; }
   .event__program__section .program {
-    width: 50%;
+    width: 60%;
     margin-top: 30px;
-    padding-left: 30px;
     position: relative; }
     .event__program__section .program h2 {
       font-size: 30px;
@@ -660,11 +835,10 @@ header {
         margin-bottom: 2px; }
       .event__program__section .program .program__item .circle {
         position: absolute;
-        top: 0;
-        left: -13.5px; }
+        left: -8.5px; }
       .event__program__section .program .program__item .blackTreangle {
         position: absolute;
-        top: 0;
+        top: 7px;
         left: -2px; }
       .event__program__section .program .program__item .p__bold {
         font-size: 22px;
@@ -674,19 +848,18 @@ header {
           font-size: 18px;
           font-family: Gilroy_Regular;
           font-weight: 100; }
-    .event__program__section .program .last {
-      border-left: none; }
+    .event__program__section .program .program__item-last {
+      border-left: 0; }
   .event__program__section .speakers {
     position: relative;
-    width: 50%;
+    width: 40%;
     margin-top: 30px;
     height: auto; }
     .event__program__section .speakers h2 {
       font-size: 30px;
       font-weight: 600;
       font-family: Gilroy_Semiold;
-      margin-bottom: 10px;
-      padding-left: 30px; }
+      margin-bottom: 10px; }
     .event__program__section .speakers .slider__content {
       position: relative;
       margin-bottom: 90px; }
@@ -700,7 +873,6 @@ header {
           object-fit: cover; }
         .event__program__section .speakers .slider__content .speaker__info .info {
           margin-left: 20px;
-          width: 65%;
           display: flex;
           flex-direction: column; }
           .event__program__section .speakers .slider__content .speaker__info .info .p__bold {
@@ -731,7 +903,6 @@ header {
 
 @media (min-width: 992px) {
   .swiper-pagination {
-    margin-left: -70px !important;
     margin-top: 10px !important; } }
 
 .swiper-pagination-bullet {
@@ -754,17 +925,15 @@ header {
   position: relative; }
   .goals .goals-left {
     position: relative;
-    width: 46%;
+    width: 60%;
     height: auto; }
     .goals .goals-left h2 {
       font-size: 30px;
       font-weight: 600;
       font-family: Gilroy_Semiold;
       margin-bottom: 10px;
-      padding-left: 30px;
       position: relative; }
     .goals .goals-left .p {
-      padding-left: 30px;
       font-size: 18px;
       font-family: Gilroy_Regular; }
       .goals .goals-left .p span {
@@ -773,11 +942,9 @@ header {
       margin-top: 20px; }
   .goals .goals-right {
     position: relative;
-    width: 50%;
-    margin-top: 30px;
-    height: auto; }
+    width: 35%;
+    margin-top: 20px; }
     .goals .goals-right .ads__block {
-      height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -785,19 +952,26 @@ header {
       width: 80%;
       margin-left: 5%;
       border-radius: 12.4px;
-      background-color: #333333;
-      margin-top: -46.5%; }
+      background-color: #333333; }
       .goals .goals-right .ads__block .header {
         width: 100%;
-        height: 130px;
+        height: 100px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
         padding-left: 30px;
         padding-right: 30px;
         color: #fff;
-        font-size: 34px;
+        font-size: 26px;
+        transition: all 0.2s ease;
         line-height: 34px; }
+      .goals .goals-right .ads__block .header:hover {
+        color: #838383; }
+        .goals .goals-right .ads__block .header:hover .svgArrow {
+          transform: translateX(15px);
+          transition: all 0.2s ease; }
       .goals .goals-right .ads__block .add-baner {
         width: 100%; }
       .goals .goals-right .ads__block .footer {
@@ -805,10 +979,10 @@ header {
         display: flex;
         justify-content: space-between;
         flex-direction: column;
-        padding: 30px;
+        padding: 20px;
         color: #fff; }
         .goals .goals-right .ads__block .footer p {
-          font-size: 22px;
+          font-size: 18px;
           font-family: Gilroy_Regular;
           font-weight: 200; }
     .goals .goals-right .brand__name {
@@ -818,8 +992,8 @@ header {
       margin-top: 80px;
       align-items: center; }
       .goals .goals-right .brand__name img {
-        width: 165px;
-        height: 165px; }
+        width: 130px;
+        height: 130px; }
       .goals .goals-right .brand__name .info .info-item {
         margin-left: 30px;
         font-family: Gilroy_Semiold;
@@ -850,7 +1024,9 @@ header {
   box-shadow: none;
   height: 289px;
   position: relative;
-  text-decoration: none; }
+  text-decoration: none;
+  min-width: 330px;
+  max-width: 500px; }
   .event-card .card-header {
     display: flex;
     justify-content: space-between;
@@ -943,7 +1119,7 @@ header {
     margin-top: 9px;
     position: relative; }
     .event-card .card-footer h2 {
-      width: 92%;
+      width: 80% !important;
       font-size: 18px;
       line-height: 24px;
       font-weight: 600;
@@ -1012,13 +1188,28 @@ header {
   .cards__slider .sw {
     padding-left: 20px; }
 
-@media (max-width: 1340px) {
-  .ads__block {
-    height: 65% !important; } }
+@media (max-width: 1340px) and (min-width: 992px) {
+  .slider__content .speaker__info img {
+    width: 100px !important;
+    height: 100px !important; }
+  .slider__content .speaker__info .info {
+    margin-left: 10px; }
+    .slider__content .speaker__info .info .p__bold {
+      font-size: 18px !important;
+      line-height: 20px; }
+    .slider__content .speaker__info .info .program__item-p {
+      font-size: 16px !important;
+      line-height: 20px; } }
 
 @media (max-width: 1340px) and (min-width: 992px) {
   .ads__block .header {
-    font-size: 24px !important; } }
+    padding: 10px;
+    font-size: 18px !important;
+    height: 80px !important; }
+  .ads__block .footer {
+    padding-top: 18px !important;
+    font-size: 15px !important;
+    line-height: 25px; } }
 
 @media (max-width: 992px) {
   .flex-direction-controller {
@@ -1026,7 +1217,12 @@ header {
     flex-direction: column;
     margin-top: 0px !important; }
     .flex-direction-controller .links a {
-      padding-left: 30px !important; }
+      padding-left: 30px !important; } }
+  @media (max-width: 992px) and (max-width: 992px) {
+    .flex-direction-controller .links a {
+      padding-left: 0px !important; } }
+
+@media (max-width: 992px) {
     .flex-direction-controller .section {
       width: 100% !important; }
     .flex-direction-controller .ads__block {
@@ -1034,15 +1230,17 @@ header {
       width: 100% !important;
       margin-left: 0px !important; }
     .flex-direction-controller .brand__name {
-      width: 100% !important; } }
+      width: 100% !important; }
+  .reverse {
+    flex-direction: column-reverse; }
+  .inform__block-right {
+    text-align: left !important; } }
 
 @media (max-width: 576px) {
   .h2 {
     font-size: 24px !important; }
   h3 {
     font-size: 24px !important; }
-  .svg__colored__treangle {
-    top: 7px; }
   .butto__wrap {
     width: 100% !important; }
     .butto__wrap button {
@@ -1059,22 +1257,30 @@ header {
     height: 100px !important; }
   .brand__name .info .info-item {
     font-size: 18px !important;
-    color: red;
     line-height: 24px !important; } }
 
 @media (max-width: 500px) {
   .h2 {
-    margin-bottom: 10px !important; }
+    margin-bottom: 5px !important;
+    margin-left: 5px; }
   .p {
-    padding-left: 10px !important; }
+    margin-left: 5px !important; }
+  .p__ml20 {
+    margin-left: 10px !important; }
+  .info__line .p__bold {
+    margin-left: 10px !important; }
+  .links span {
+    margin-left: 10px; }
   .program__item-p {
     font-size: 13px !important; }
-  .speaker__info img {
-    margin-top: 10px;
-    width: 100px !important;
-    height: 100px !important; }
-  .speaker__info .info a {
-    margin-top: 10px !important; } }
+  .speaker__info {
+    margin-left: 5px; }
+    .speaker__info img {
+      margin-top: 10px;
+      width: 100px !important;
+      height: 100px !important; }
+    .speaker__info .info a {
+      margin-top: 10px !important; } }
 
 @media (max-width: 450px) {
   .ads__block .header {
@@ -1157,6 +1363,108 @@ header {
       left: 15%;
       width: 70%;
       z-index: 25 !important; } }
+
+.footer-inner {
+  background: #343434;
+  padding: 40px 0px 22px;
+  display: flex;
+  flex-wrap: wrap; }
+
+.footer-inner-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 57px; }
+
+.footer-list-block__title {
+  position: relative;
+  color: #FFF;
+  margin-bottom: 34px;
+  font-weight: 500;
+  font-size: 27px;
+  line-height: 33px; }
+
+.footer-inner-last a img {
+  max-width: 120px; }
+
+.footer-list-block__title:before {
+  content: url("../assets/redTreangle.svg");
+  display: block;
+  position: absolute;
+  left: -35px !important;
+  top: 6px !important; }
+
+.footer-list {
+  margin-bottom: 49px; }
+
+.footer-list li {
+  margin-bottom: 9px;
+  max-width: 316px; }
+
+.footer-list li a {
+  color: #FFF;
+  font-size: 16px;
+  line-height: 24px;
+  opacity: 1;
+  transition: all 0.3s ease; }
+
+.footer-inner-bot {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between; }
+
+.footer-inner-bot .policy-footer {
+  color: #FFF;
+  font-size: 14px;
+  line-height: 22px;
+  padding-left: 59px;
+  margin-top: 20px; }
+
+.footer-inner-bot .policy-footer span {
+  display: block;
+  font-size: 14px;
+  margin-top: 10px; }
+
+.footer-inner-bot ul li a {
+  font-size: 28px;
+  line-height: 34px;
+  color: #FFF; }
+
+.footer-inner-bot ul li:not(:last-child) {
+  margin-bottom: 8px; }
+
+li a {
+  text-decoration: none;
+  font-family: Gilroy_Regular; }
+
+@media (max-width: 992px) {
+  .footer-list-block:not(:last-child), .footer-list-block {
+    padding-left: 0px; }
+  .footer-inner-item {
+    margin-bottom: 0; }
+  .card-info-right_sec {
+    position: relative;
+    right: 0;
+    top: 0; }
+  .footer-list-block__title:before {
+    left: -12px;
+    top: 6px; }
+  .footer-list-block__title {
+    padding-left: 15px; }
+  .footer-list {
+    padding: 0px 15px; }
+  .footer-inner-bot {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 15px; }
+  .footer-inner-bot ul {
+    margin-bottom: 15px;
+    margin-left: 0; }
+  .footer-inner-bot .policy-footer {
+    margin-bottom: 10px;
+    padding-left: 0; }
+  .footer-list-block-padding {
+    left: 30px !important; } }
 
 *,
 *::before,

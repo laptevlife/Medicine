@@ -116,6 +116,7 @@ header {
         .logo {
             position: relative;
             height: 90px;
+            text-decoration: none;
 
             svg {
                 width: 120px;
@@ -859,8 +860,8 @@ header {
 
 .svg__colored__treangle {
     position: absolute;
-    top: 12px;
-    left: 0px;
+    // top: 12px;
+    // left: 0px;
     // background-color: red;
     // width: 30px;
     // height: 30px;
@@ -894,7 +895,7 @@ header {
         .inform__block-left {
             width: 50%;
             margin-top: 30px;
-            padding-left: 30px;
+            // padding-left: 30px;
             position: relative;
 
             // .svg__colored__treangle {
@@ -954,6 +955,7 @@ header {
             // margin: auto;
             // text-align: center;
             position: relative;
+            text-align: right;
 
             .butto__wrap {
                 // position: absolute;
@@ -970,7 +972,7 @@ header {
                 z-index: -1;
                 background: linear-gradient(255deg, #feda7a, #f72f2f, #7166cf);
                 background-size: 130% 110%;
-                transition:  1s ease !important;
+                transition: all  0.5s ease !important;
 
                 button {
                     // width: 300px;
@@ -1051,7 +1053,9 @@ header {
 
         }
     }
+  
 }
+
 
 .event__program__section {
     display: flex;
@@ -1061,9 +1065,9 @@ header {
     margin-top: 50px;
 
     .program {
-        width: 50%;
+        width: 60%;
         margin-top: 30px;
-        padding-left: 30px;
+        // padding-left: 30px;
         position: relative;
 
         // .svg__colored__treangle {
@@ -1107,13 +1111,13 @@ header {
 
             .circle {
                 position: absolute;
-                top: 0;
-                left: -13.5px;
+                // top: 5px;
+                left: -8.5px;
             }
 
             .blackTreangle {
                 position: absolute;
-                top: 0;
+                top: 7px;
                 left: -2px;
             }
 
@@ -1131,15 +1135,15 @@ header {
 
         }
 
-        .last {
-            border-left: none;
+        .program__item-last {
+            border-left: opacity($color: rgba(255, 255, 255, 0));
         }
 
     }
 
     .speakers {
         position: relative;
-        width: 50%;
+        width: 40%;
         margin-top: 30px;
         height: auto;
 
@@ -1156,7 +1160,7 @@ header {
             font-weight: 600;
             font-family: Gilroy_Semiold;
             margin-bottom: 10px;
-            padding-left: 30px;
+            // padding-left: 30px;
         }
 
         .slider__content {
@@ -1167,9 +1171,12 @@ header {
                 position: relative;
                 display: flex;
                 margin-bottom: 20px;
+                // flex-direction: column;
                 // justify-content: space-between;
 
                 img {
+                    // width: 50%;
+                    // height: 50%;
                     width: 160px;
                     height: 160px;
                     object-fit: cover;
@@ -1177,10 +1184,11 @@ header {
 
                 .info {
                     margin-left: 20px;
-                    width: 65%;
+                    // width: 65%;
                     display: flex;
                     flex-direction: column;
                     // line-height: 25px;
+                    // width: 50%;
 
                     .p__bold {
                         font-size: 22px;
@@ -1225,6 +1233,7 @@ header {
                 }
 
             }
+     
 
         }
     }
@@ -1236,7 +1245,7 @@ header {
 
 @media (min-width: 992px) {
     .swiper-pagination {
-        margin-left: -70px !important;
+        // margin-left: -70px !important;
         margin-top: 10px !important;
     }
 }
@@ -1269,7 +1278,7 @@ header {
 
     .goals-left {
         position: relative;
-        width: 46%;
+        width: 60%;
         // padding-left: 30px;
         // margin-top: 30px;
         // background-color: red;
@@ -1280,12 +1289,12 @@ header {
             font-weight: 600;
             font-family: Gilroy_Semiold;
             margin-bottom: 10px;
-            padding-left: 30px;
+            // padding-left: 30px;
             position: relative;
         }
 
         .p {
-            padding-left: 30px;
+            // padding-left: 30px;
             font-size: 18px;
             font-family: Gilroy_Regular;
 
@@ -1303,13 +1312,13 @@ header {
 
     .goals-right {
         position: relative;
-        width: 50%;
-        margin-top: 30px;
-        height: auto;
+        width: 35%;
+        margin-top: 20px;
+        // height: auto;
 
         // border: 1px solid black;
         .ads__block {
-            height: 100%;
+            // height: 70%;
             // border: 1px solid red;
             // display: block;
             display: flex;
@@ -1320,22 +1329,32 @@ header {
             margin-left: 5%;
             border-radius: 12.4px;
             background-color: #333333;
-            margin-top: -46.5%;
+            // margin-top: -46.5%;
 
             .header {
                 width: 100%;
-                height: 130px;
+                height: 100px ;
                 // background-color: red;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                padding-top: 10px;
+                padding-bottom: 10px;
                 padding-left: 30px;
                 padding-right: 30px;
                 color: #fff;
-                font-size: 34px;
+                font-size: 26px;
                 // font-size: calc( (100vw - 30rem)/(80 - 30) * (1.5 - 1) + 1rem);
-
+                transition: all $transition ease;
                 line-height: 34px;
+            }
+            .header:hover{
+                color: rgb(131, 131, 131);
+                .svgArrow {
+                    transform: translateX(15px);
+                    transition: all $transition ease;
+
+                }
             }
 
             .add-baner {
@@ -1352,13 +1371,13 @@ header {
                 flex-direction: column;
                 // padding-left: 30px;
                 // padding-right: 30px;
-                padding: 30px;
+                padding: 20px;
                 color: #fff;
 
                 // font-size: 18px;
                 // line-height: 18px;
                 p {
-                    font-size: 22px;
+                    font-size: 18px;
                     font-family: Gilroy_Regular;
                     font-weight: 200;
                     // line-height: 32px;
@@ -1374,8 +1393,8 @@ header {
             align-items: center;
 
             img {
-                width: 165px;
-                height: 165px;
+                width: 130px;
+                height: 130px;
             }
 
             .info {
@@ -1426,6 +1445,8 @@ header {
     position: relative;
     // color: red;
     text-decoration: none;
+    min-width: 330px;
+    max-width: 500px;
 
     .card-header {
         display: flex;
@@ -1596,8 +1617,8 @@ header {
         // font-family: Gilroy_Semiold;
         // }
         h2 {
-            // width: 80% !important;
-            width: 92% ;
+            width: 80% !important;
+            // width: 92% ;
             font-size: 18px;
             line-height: 24px;
             font-weight: 600;
@@ -1990,15 +2011,51 @@ header {
 
 @media (max-width: 1340px) {
     .ads__block {
-        height: 65% !important;
+        // height: 65% !important;
+    }
+  
+}
+@media (max-width: 1340px) and (min-width: 992px) {
+    .slider__content{
+        .speaker__info{
+            img{
+                width: 100px !important;
+                height: 100px !important;
+            }
+            .info{
+                margin-left: 10px;
+                .p__bold{
+                    font-size: 18px !important;
+                    line-height: 20px;
+                }
+
+                .program__item-p{
+                    font-size: 16px !important;
+                    line-height: 20px;
+                }
+            }
+           
+        }
     }
 }
 
+
 @media (max-width: 1340px) and (min-width: 992px) {
     .ads__block {
+        // padding: 10px;
+        // width: 60%;
         .header {
-            font-size: 24px !important;
+            padding: 10px;
+            font-size: 18px !important;
+            height: 80px !important;
         }
+        .footer{
+            // padding: 15px !important;
+            padding-top: 18px !important;
+            font-size: 15px !important;
+            line-height: 25px;
+        }
+    
     }
 }
 
@@ -2011,6 +2068,7 @@ header {
     //     line-height: 24px !important;
     //     color: red !important;
     // }
+  
     .flex-direction-controller {
         display: flex;
         flex-direction: column;
@@ -2019,16 +2077,19 @@ header {
 
         .links {
 
-
             a {
                 padding-left: 30px !important;
-
-                // span {
-                //     font-size: 20px !important;
-                // }
-
             }
 
+        }
+        @media (max-width: 992px){
+            .links {
+
+                a {
+                    padding-left: 0px !important;
+                }
+    
+            }
         }
 
         // h2{
@@ -2041,6 +2102,7 @@ header {
         }
 
         .ads__block {
+
             margin-top: 0px !important;
             width: 100% !important;
             margin-left: 0px !important;
@@ -2057,8 +2119,15 @@ header {
             }
         }
     }
+    .reverse{
+        flex-direction: column-reverse;
+    }
+    .inform__block-right{
+        text-align: left !important;
+    }
 
 }
+
 
 @media (max-width: 576px) {
     .h2 {
@@ -2069,9 +2138,9 @@ header {
     h3{
         font-size: 24px !important;
     }
-    .svg__colored__treangle {
-        top: 7px;
-    }
+    // .svg__colored__treangle {
+    //     top: 7px;
+    // }
 
     .butto__wrap {
 
@@ -2104,7 +2173,7 @@ header {
         .info{
             .info-item{
                 font-size: 18px !important;
-                color: red;
+                // color: red;
                 line-height: 24px !important;
             }
         }
@@ -2119,14 +2188,29 @@ header {
 
 @media (max-width: 500px) {
     .h2{
-        margin-bottom: 10px !important;
+        margin-bottom: 5px !important;
+        margin-left: 5px;
     }
     .p{
-        padding-left: 10px !important;
+        margin-left: 5px !important;
     }
-    // .p__ml{
-    //     margin-left: -20px !important;
-    // }
+    .p__ml20{
+        margin-left: 10px !important;
+    }
+    .p__ml{
+        // margin-left: 5px !important;
+    }
+    .info__line{
+        .p__bold{
+            margin-left: 10px !important;
+        }
+    }
+    .links{
+        span{
+            margin-left: 10px;
+        }
+    }
+  
     // .inform__block-left {
     //     // padding-left: 10px !important;
     // }
@@ -2135,12 +2219,14 @@ header {
         font-size: 13px !important;
     }
     .speaker__info{
+        margin-left: 5px;
         img{
             margin-top: 10px;
             width: 100px !important;
             height: 100px !important;
         }
         .info{
+
             a{
                 margin-top: 10px !important;
             }
@@ -2308,3 +2394,158 @@ header {
    
 
 }
+
+
+
+
+//FOOTER
+
+
+.footer-inner {
+    background: #343434;
+    padding: 40px 0px 22px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-inner-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 57px;
+}
+
+.footer-list-block__title {
+    position: relative;
+    color: #FFF;
+    margin-bottom: 34px;
+    font-weight: 500;
+    font-size: 27px;
+    line-height: 33px;
+}
+
+.footer-inner-last a img {
+    max-width: 120px;
+}
+
+.footer-list-block__title:before {
+    content: url("../assets/redTreangle.svg");
+    display: block;
+    position: absolute;
+    left: -35px !important;
+    top: 6px !important;
+}
+
+// .footer-list-block:not(:last-child) {
+//     padding-left: 59px;
+// }
+
+.footer-list {
+    margin-bottom: 49px;
+}
+
+.footer-list li {
+    margin-bottom: 9px;
+    max-width: 316px;
+}
+
+.footer-list li a {
+    color: #FFF;
+    font-size: 16px;
+    line-height: 24px;
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+.footer-inner-bot {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.footer-inner-bot .policy-footer {
+    color: #FFF;
+    font-size: 14px;
+    line-height: 22px;
+    padding-left: 59px;
+    margin-top: 20px;
+}
+
+.footer-inner-bot .policy-footer span {
+    display: block;
+    font-size: 14px;
+    margin-top: 10px;
+
+}
+
+.footer-inner-bot ul li a {
+    font-size: 28px;
+    line-height: 34px;
+    color: #FFF;
+}
+
+.footer-inner-bot ul li:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+
+li{
+    a{
+        text-decoration: none;
+        font-family: Gilroy_Regular;
+    }
+}
+
+
+@media (max-width:992px){
+    .footer-list-block:not(:last-child), .footer-list-block {
+        padding-left: 0px;
+    }
+    .footer-inner-item {
+        margin-bottom: 0;
+    }
+    .card-info-right_sec {
+        position: relative;
+        right: 0;
+        top: 0;
+    }
+    .footer-list-block__title:before {
+       left: -12px;
+        top: 6px;
+    }
+    .footer-list-block__title {
+        padding-left: 15px;
+    }
+    .footer-list {
+        padding: 0px 15px;
+    }
+
+    .footer-inner {
+        // padding: 40px 0.75rem 22px;
+    }
+    .footer-inner-bot {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 15px;
+        // justify-content: center;
+    }
+    .footer-list li a {
+       
+    }
+    .footer-inner-bot ul li {
+        // text-align: center;
+    }
+    .footer-inner-bot ul {
+        margin-bottom: 15px;
+        margin-left: 0;
+    }
+    .footer-inner-bot .policy-footer {
+        // text-align: center;
+        margin-bottom: 10px;
+        padding-left: 0;
+    }
+    .footer-list-block-padding{
+        left: 30px !important;
+    }
+}
+
