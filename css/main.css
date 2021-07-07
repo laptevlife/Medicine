@@ -1290,7 +1290,9 @@ header {
       .links a span {
         font-size: 20px !important; }
   .brand__name {
-    margin-top: 40px !important; }
+    margin-top: 40px !important;
+    width: 100% !important;
+    margin-left: 0 !important; }
     .brand__name img {
       width: 100px !important;
       height: 100px !important; }
