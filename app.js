@@ -37,7 +37,7 @@ favoritesAdd.addEventListener('mouseover', () => {
 })
 favoritesAdd.addEventListener('mouseout', () => {
     // console.log('enter2');
-    butto__wrap.style.background = 'linear-gradient(255deg, #feda7a, #f72f2f, #7166cf)';
+    butto__wrap.style.background = '';
     butto__wrap.style.backgroundSize = " 220% 110%"
     butto__wrap.style.transition = " all 1s ease"
 })
@@ -85,27 +85,27 @@ var sectionIndex = 0;
 let specialtyItems = document.querySelectorAll('div[data-specialty]')//data-specialty
 
 //  let specialtyItems = document.querySelectorAll('.specialtyItem')
-const scrollWrap = document.querySelector('.scrollWrap')
+// const scrollWrap = document.querySelector('.scrollWrap')
 
 
-const hideArrow = () => {
-    // console.log('sectionIndex', sectionIndex);
+// const hideArrow = () => {
+//     // console.log('sectionIndex', sectionIndex);
 
 
-    // console.log( scrollWrap.offsetWidth, x);
+//     // console.log( scrollWrap.offsetWidth, x);
     
-    if (sectionIndex === 0) {
-        leftArrow.style.opacity = 0
-    } else {
-        leftArrow.style.opacity = 1
-    }
-    if ( sectionIndex > specialtyItems.length - 1 || scrollWrap.offsetWidth <  (sectionIndex+2) * 200 ) {
-        rightArrow.style.opacity = 0
-    } else {
-        rightArrow.style.opacity = 1
-    }
+//     if (sectionIndex === 0) {
+//         leftArrow.style.opacity = 0
+//     } else {
+//         leftArrow.style.opacity = 1
+//     }
+//     if ( sectionIndex > specialtyItems.length - 1 || scrollWrap.offsetWidth <  (sectionIndex+2) * 200 ) {
+//         rightArrow.style.opacity = 0
+//     } else {
+//         rightArrow.style.opacity = 1
+//     }
  
-}
+// }
 
 
 
@@ -207,9 +207,12 @@ var swiper = new Swiper(".mySwiper", {
 
 var swiper = new Swiper(".specialtySwiper", {
     // spaceBetween: 30,
+    // slidesPerViewFit : false,
+    // roundLengths : false,
+    //  loop: true,
     freeMode: true,
     autoplay: {
-        delay: 5000,
+        delay: 3000,
         disableOnInteraction: false,
         pauseOnMouseEnter: true,
     },

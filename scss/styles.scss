@@ -521,12 +521,14 @@ header {
         @media (max-width: 1330px) {
             h1 {
                 font-size: 24px;
+                font-weight: 800;
             }
         }
 
         @media (max-width: 992px) {
             h1 {
                 font-size: 18px;
+                font-weight: 800;
             }
         }
 
@@ -539,6 +541,7 @@ header {
             h1 {
                 font-size: 17px;
                 line-height: 20px !important;
+                font-weight: 800;
             }
         }
 
@@ -580,6 +583,7 @@ header {
             font-size: calc((100vw - 30rem)/(80 - 30) * (1.5 - 1) + 1rem);
             // margin-top: 10px;
             font-family: Gilroy_Semiold;
+            font-weight: 800;
         }
 
         .more450 {}
@@ -589,7 +593,7 @@ header {
             border-radius: 6.4px;
             border: 1px solid #333333c0;
             background-color: #fff;
-            margin-top: 10px;
+            margin-top: 8px;
             font-family: Gilroy_Semiold;
             font-weight: 600;
             color: #333333c0;
@@ -792,7 +796,9 @@ header {
         // overflow: hidden;
         // align-items: center;
         overflow-x: scroll;
+        padding-left: 5px;
         // background-color: red;
+        // background-color: red !important;
 
         .arrowBlock {
             position: absolute;
@@ -825,10 +831,11 @@ header {
         .scrollContainer {
             margin-top: 8px;
             display: flex;
-            // padding-left: 20px;
+            // margin-left: 5px;
             transition: all 0.2s ease-in;
             margin-bottom: 20px;
             position: relative;
+            // background-color: red !important;
             // margin-bottom: -2px;
 
             div,
@@ -919,6 +926,7 @@ header {
     opacity: 0;
     // background-image: url('../assets/arrow-slider-right.png');
 }
+
 .svg__colored__treangle {
     position: absolute;
     // top: 12px;
@@ -1031,7 +1039,7 @@ header {
                 border-radius: 10.4px;
 
                 z-index: -1;
-                background: linear-gradient(255deg, #feda7a, #f72f2f, #7166cf);
+                // background: linear-gradient(255deg, #feda7a, #f72f2f, #7166cf);
                 background-size: 130% 110%;
                 transition: all 0.5s ease !important;
 
@@ -1320,9 +1328,24 @@ header {
     border: 1px solid #333333;
 
 }
+.specialtySwiper {
+    width: 100%;
+}
+// .swiper-container{
+//     width: 100% !important;
+//     position: relative !important;
+// }
+.swiper-wrapper{
+    width: 100% !important;
+    position: relative !important;
+}
 
 .swiper-pagination-bullet-active {
     background-color: #333333;
+}
+
+.swiper-button-disabled {
+    opacity: 0 !important;
 }
 
 .h2 {
@@ -1544,7 +1567,8 @@ header {
         .dates {
             div {
                 font-size: 24px;
-                font-weight: 100 !important;
+                // font-weight: 100 !important;
+                font-weight: 800;
                 line-height: 28px;
                 font-family: Gilroy_bold;
                 // height: 50px;
@@ -1793,7 +1817,7 @@ header {
 
 .swiper-slide {
     width: auto;
-min-width: 200px;
+    min-width: 200px;
 }
 
 .cards__slider {
@@ -1883,9 +1907,10 @@ min-width: 200px;
 @media (max-width: 992px) {
 
     // h1{
-    //     font-size: 18px !important;
-    //     line-height: 24px !important;
-    //     color: red !important;
+    //     font-weight: 800 !important;
+    //     // font-size: 18px !important;
+    //     // line-height: 24px !important;
+    //     // color: red !important;
     // }
     .program__item {
         width: 98% !important;
@@ -2040,7 +2065,7 @@ min-width: 200px;
     }
 }
 
-.burger{
+.burger {
     cursor: pointer;
 }
 
@@ -2056,6 +2081,7 @@ min-width: 200px;
         font-size: 24px !important;
 
     }
+
     .common-events {
         // font-size: 24px !important;
         margin-top: 40px !important;
@@ -2355,7 +2381,8 @@ min-width: 200px;
                     justify-content: center;
                     align-items: center;
 
-                    img, svg {
+                    img,
+                    svg {
                         width: 100%;
                     }
                 }
